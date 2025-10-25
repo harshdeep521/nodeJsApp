@@ -6,7 +6,7 @@ files:
     overwrite: yes
 hooks:
   BeforeInstall:
-    - location: scripts/cleanup.sh
+    - location: "echo 'Cleaning folder...' && rm -rf /home/ec2-user/nodeJsApp/*"
       timeout: 300
       runas: ec2-user
   AfterInstall:
