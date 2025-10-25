@@ -6,7 +6,8 @@ files:
     overwrite: yes
 hooks:
   BeforeInstall:
-    - location: scripts/stop_server.sh
+    - location: scripts/cleanup.sh
+      timeout: 300
       runas: ec2-user
   AfterInstall:
     - location: scripts/install_dependencies.sh
